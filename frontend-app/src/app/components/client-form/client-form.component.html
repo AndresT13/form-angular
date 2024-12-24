@@ -1,0 +1,45 @@
+<div class="form-container">
+  <h2>Buscar Usuario</h2>
+
+  <div class="form-group">
+    <label for="tipoDocumento">Tipo de Documento:</label>
+    <select
+      id="tipoDocumento"
+      [(ngModel)]="tipoDocumento"
+      (change)="onInputChange()"
+      class="form-control"
+    >
+      <option value="" disabled selected>
+        Seleccione un tipo de documento
+      </option>
+      <option value="Cédula">Cédula</option>
+      <option value="Pasaporte">Pasaporte</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="numeroDocumento">Número de Documento:</label>
+    <input
+      type="number"
+      id="numeroDocumento"
+      [(ngModel)]="numeroDocumento"
+      (input)="onInputChange()"
+      [disabled]="!tipoDocumento"
+      class="form-control"
+      placeholder="Ingrese el número de documento"
+    />
+  </div>
+
+  <div class="form-group">
+    <button
+      [disabled]="!botonBuscarHabilitado"
+      (click)="onBuscar()"
+      class="btn btn-primary"
+    >
+      Buscar
+    </button>
+  </div>
+</div>
+
+<!-- Resultados del ClienteListComponent -->
+<list-client [resultados]="resultadosFiltrados"></list-client>
