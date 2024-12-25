@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h2>Resumen de Información</h2>
+
+  <div class="list-group">
+    <div class="list-group-item">
+      <strong>Tipo de Documento:</strong>
+      {{ documentType === "cc" ? "Cédula de Ciudadanía" : "Pasaporte" }}
+    </div>
+    <div class="list-group-item">
+      <strong>Número de Documento:</strong> {{ documentNumber }}
+    </div>
+  </div>
+
+  <button class="btn btn-secondary mt-4" (click)="onBack()">Volver</button>
+</div>

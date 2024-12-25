@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListClientComponent } from './list-client.component';
+import { SumaryComponent } from './sumary.component';
 
-describe('ListClientComponent', () => {
-  let component: ListClientComponent;
-  let fixture: ComponentFixture<ListClientComponent>;
+describe('SumaryComponent', () => {
+  let component: SumaryComponent;
+  let fixture: ComponentFixture<SumaryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ListClientComponent]
+      imports: [SumaryComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ListClientComponent);
+    fixture = TestBed.createComponent(SumaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
